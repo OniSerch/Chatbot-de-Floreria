@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlorIA</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/config.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="logo">
+            FlorIA
+        </div>
+
+        <ul>
+
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#chatbot">Chat</a></li>
+
+        </ul>
+
+    </nav>
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>Las flores hablan cuando las palabras no alcanzan</h1>
+
+            <p>
+                Ramos para cumpleaños, aniversarios y momentos especiales.
+            </p>
+
+            <button>Comprar Ahora</button>
+
+        </div>
+
+    </section>
+
+    <section class="parallax">
+
+    </section>
+
+    <section id="nosotros">
+        <section class="about" id="nosotros">
+
+            <div>
+
+                <img src="https://i.pinimg.com/236x/b1/23/49/b12349cd470f7bc4dbf46757f73cff99.jpg">
+
+            </div>
+
+            <div>
+
+                <h2>Sobre Nosotros</h2>
+
+                <p>
+
+                    En FlorIA creemos que cada flor transmite una emoción.
+
+                    Nuestro asistente virtual puede ayudarte a elegir el ramo perfecto.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <section id="servicios">
+        <section class="cards">
+
+            <div class="card">
+                <img src="https://floresguate.com/wp-content/uploads/2026/03/Historia-de-instagram-dia-de-la-madre-moderno-rojo-1080-x-1080-px-13-300x300.png"
+                    alt="">
+
+                <h3>Ramos</h3>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg5zdHqa1eXHWa4NULfSw0YmEdYUESxLREAk59iB8PSSRAvoZQR9RYoNQ&s=10"
+                    alt="">
+
+                <h3>Bodas</h3>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRra7WmbO6OY1oO15TE_pb-Q-n3zI4davApX7zICWXHj4JIMJBfK0ZTHbvM&s=10"
+                    alt="">
+
+                <h3>Eventos</h3>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://w7.pngwing.com/pngs/169/167/png-transparent-package-delivery-mail-box-parcel-box-thumbnail.png"
+                    alt="">
+
+                <h3>Entrega</h3>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <div class="chat_button" onclick="toggleChat()">
+        🌸
+    </div>
+
+    <div class="chatbot_container" id="chatbot">
+        <div class="chatbot_header">
+            FlorIA
+            <small>Asistente Virtual</small>
+        </div>
+
+        <div class="chatbot_chat" id="chat">
+
+            <div class="chatbot_message chatbot_bot">
+                <div class="chatbot_bubble">
+                    ¡Hola! Bienvenido a FlorIA.
+                    <br><br>
+                    ¿Cómo puedo ayudarte hoy?
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chatbot_footer">
+
+            <input id="input" type="text" placeholder="Escribe un mensaje..."
+                onkeydown="if(event.key==='Enter') sendMessage()">
+
+            <button onclick="sendMessage()">
+                Enviar
+            </button>
+
+        </div>
+
+
+
+        <footer>
+        </footer>
+        <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
